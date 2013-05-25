@@ -5,8 +5,8 @@
     <tr>
       <td><%= grievance.content %></td>
       <div id='grievance-<%=grievance.id%>'>
-        <td><%= grievance.ups %></td>
-        <td><%= grievance.downs %></td>
+        <td><%= link_to "Come on!", up_grievance_path(grievance.id), remote: true %> (<%= grievance.ups %>)</td>
+        <td><%= link_to "Want some whine with that cheese?", grievance, remote: true %> (<%= grievance.downs %>)</td>
       </div>
     </tr>
   <% end %>

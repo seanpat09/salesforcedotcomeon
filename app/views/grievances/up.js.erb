@@ -1,1 +1,1 @@
-$("grievance-<%= @grievance.id %>").html('<%escape_javascript @grievance.up %>');
+$("grievance-<%= @grievance.id %>").update("<%=escape_javascript @grievance %>");

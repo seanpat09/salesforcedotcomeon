@@ -1,4 +1,6 @@
 class GrievancesController < ApplicationController
+  before_action :set_grievance, only: [:up, :down] 
+
   # GET /grievances
   # GET /grievances.json
   def index
@@ -27,16 +29,29 @@ class GrievancesController < ApplicationController
   end
 
   def up
+    @grievance = Grievance.find_by_id(params[:id])
     @grievance.ups += 1
-    @grievance.update
+    @grievance.save
+    respond_to do |format|
+      format.html {redirect_to :root}
+      format.js
+    end
   end
 
   def down
     @grievance.downs += 1
-    @grievance.update
+    @grievance.save
+    respond_to do |format|
+      format.html {redirect_to :root}
+      format.js
+    end
   end
 
   private
+    def set_grievance
+      @grievance = Grievance.find(params[:id])
+    end
+
     # Never trust parameters from the scary internet, only allow the white list through.
     def grievance_params
       params.require(:grievance).permit(:content, :ups, :downs)
