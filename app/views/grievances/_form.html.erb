@@ -1,0 +1,29 @@
+<%= form_for(@grievance) do |f| %>
+  <% if @grievance.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@grievance.errors.count, "error") %> prohibited this grievance from being saved:</h2>
+
+      <ul>
+      <% @grievance.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :content %><br>
+    <%= f.text_area :content %>
+  </div>
+  <div class="field">
+    <%= f.label :ups %><br>
+    <%= f.number_field :ups %>
+  </div>
+  <div class="field">
+    <%= f.label :downs %><br>
+    <%= f.number_field :downs %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
