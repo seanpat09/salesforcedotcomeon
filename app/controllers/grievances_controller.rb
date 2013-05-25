@@ -26,6 +26,16 @@ class GrievancesController < ApplicationController
     end
   end
 
+  def up
+    @grievance.ups += 1
+    @grievance.update
+  end
+
+  def down
+    @grievance.downs += 1
+    @grievance.update
+  end
+
   private
     # Never trust parameters from the scary internet, only allow the white list through.
     def grievance_params

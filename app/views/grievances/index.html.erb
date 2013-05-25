@@ -4,8 +4,10 @@
   <% @grievances.each do |grievance| %>
     <tr>
       <td><%= grievance.content %></td>
-      <td><%= grievance.ups %></td>
-      <td><%= grievance.downs %></td>
+      <div id='grievance-<%=grievance.id%>'>
+        <td><%= grievance.ups %></td>
+        <td><%= grievance.downs %></td>
+      </div>
     </tr>
   <% end %>
 </table>
