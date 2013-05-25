@@ -1,31 +1,15 @@
 <h1>Listing grievances</h1>
 
 <table>
-  <thead>
+  <% @grievances.each do |grievance| %>
     <tr>
-      <th>Content</th>
-      <th>Ups</th>
-      <th>Downs</th>
-      <th></th>
-      <th></th>
-      <th></th>
+      <td><%= grievance.content %></td>
+      <td><%= grievance.ups %></td>
+      <td><%= grievance.downs %></td>
     </tr>
-  </thead>
-
-  <tbody>
-    <% @grievances.each do |grievance| %>
-      <tr>
-        <td><%= grievance.content %></td>
-        <td><%= grievance.ups %></td>
-        <td><%= grievance.downs %></td>
-        <td><%= link_to 'Show', grievance %></td>
-        <td><%= link_to 'Edit', edit_grievance_path(grievance) %></td>
-        <td><%= link_to 'Destroy', grievance, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
+  <% end %>
 </table>
 
 <br>
 
-<%= link_to 'New Grievance', new_grievance_path %>
+<%= link_to 'Vent', new_grievance_path %>
