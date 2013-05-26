@@ -1,6 +1,6 @@
 <div id='header'>
   <h1 id='title'>Grievances from Anonymous Salesforce Developers</h1>
-  <%= link_to 'Vent', new_grievance_path %>
+  <%= link_to 'Vent', new_grievance_path, :id => 'vent' %>
 </div>
 <div class='grievances'>
   <% @grievances.each do |grievance| %>
@@ -20,5 +20,8 @@
   <% end %>
 </div>
 
+<div id='new'>
+  <%= render 'form' %>
+</div>
 <br>
 

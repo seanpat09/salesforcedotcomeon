@@ -5,6 +5,7 @@ class GrievancesController < ApplicationController
   # GET /grievances.json
   def index
     @grievances = Grievance.all
+    @grievance = Grievance.new
   end
 
   # GET /grievances/new

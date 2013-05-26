@@ -2,10 +2,6 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-body {
-  background-image: url('binding_dark.png');
-}
-
 .votes{
   line-height: 7;
 }
@@ -56,7 +52,8 @@ a:hover{
   margin: 10px;
   border-radius: 10px;
   height: 100px;
-  background-image: url('white_wall_hash.png'); 
+  background-image: url('white_wall_hash.png');
+  box-shadow: 3px 3px 1px; 
 }
 
 .content{
