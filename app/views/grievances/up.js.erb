@@ -1,1 +1,2 @@
-$("grievance-<%= @grievance.id %>").update("<%=escape_javascript @grievance %>");
+$("#grievance-<%= @grievance.id %> .up").html("(<%=@grievance.ups%>)");
+$("#grievance-<%= @grievance.id %> a ").removeAttr('href');
