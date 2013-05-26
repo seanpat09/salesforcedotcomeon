@@ -1,22 +1,24 @@
-<h1>Grievances from Anonymous Salesforce Developers</h1>
-
-<table id='grievances'>
+<div id='header'>
+  <h1 id='title'>Grievances from Anonymous Salesforce Developers</h1>
+  <%= link_to 'Vent', new_grievance_path %>
+</div>
+<div class='grievances'>
   <% @grievances.each do |grievance| %>
-    <tr id='grievance-<%=grievance.id%>'>
-      <td><%= grievance.content %></td>
-        <tr>
-          <td>
-            <%= link_to "Come on!", up_grievance_path(grievance.id), remote: true %>
-            <span class='up'> (<%= grievance.ups %>) </span>
+    <div class='grievance' id='grievance-<%=grievance.id%>'>
+      <div class='content'>
+        <span class='text'><%= grievance.content %></span>
+        <br>
+        <div class='votes'>
+          <%= link_to "Come on!", up_grievance_path(grievance.id), remote: true %>
+          <span class='up'> (<%= grievance.ups %>) </span>
         
-            <%= link_to "Want some whine with that cheese?", down_grievance_path(grievance.id), remote: true %> 
-            <span class='down'> (<%= grievance.downs %>) </span>
-          </td>
-        <tr>
-    </tr>
+          <%= link_to "Want some whine with that cheese?", down_grievance_path(grievance.id), remote: true %> 
+          <span class='down'> (<%= grievance.downs %>) </span>
+        </div>
+      </div>
+    </div>
   <% end %>
-</table>
+</div>
 
 <br>
 
-<%= link_to 'Vent', new_grievance_path %>
