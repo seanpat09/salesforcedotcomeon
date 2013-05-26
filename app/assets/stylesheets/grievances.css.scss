@@ -3,37 +3,60 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 body {
-  background-image: url('http://subtlepatterns.com/patterns/binding_dark.png');
+  background-image: url('binding_dark.png');
+}
+
+.votes{
+  line-height: 7;
+}
+
+.up-link{
+  color: blue;
+  &:hover{
+    color: skyblue;
+  }
+}
+
+.down-link{
+  color: red;
+  &:hover{
+    color: lightpink;
+  }
+}
+
+a:hover{
+  background: none;
 }
 
 #header {
   position: relative;
   color: white;
   height: 100px;
-  width: 900px;
+  max-width: 750px;
   margin: 0 auto;
 }
 
 #title{
   position: absolute;
-  line-height: 4;
+  line-height: 6;
+  font-size: 20px;
 }
 
 #header a {
   float: right;
-  line-height: 11;
+  line-height: 11.5;
 }
   
 .grievances {
   margin: 0 auto;
-  width: 1000px;
+  max-width: 800px;
 }
 
 .grievance{
   margin: 10px;
   border-radius: 10px;
   height: 100px;
-  background-image: url('http://subtlepatterns.com/patterns/white_wall_hash.png'); 
+  background-image: url('white_wall_hash.png'); 
 }
 
 .content{
