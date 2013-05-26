@@ -21,7 +21,8 @@ class GrievancesController < ApplicationController
     respond_to do |format|
       if @grievance.save
         format.html { redirect_to :root, notice: 'Grievance was successfully created.' }
-        format.json { render action: 'show', status: :created, location: @grievance }
+        format.js {}
+        format.json { render json: @grievance, status: :created, location: @grievance }
       else
         format.html { render action: 'new' }
         format.json { render json: @grievance.errors, status: :unprocessable_entity }

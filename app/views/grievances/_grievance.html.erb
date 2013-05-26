@@ -1,0 +1,14 @@
+<div class='grievance' id='grievance-<%=grievance.id%>'>
+  <div class='content'>
+    <span class='text'><%= grievance.content %></span>
+    <br>
+    <div class='votes'>
+      <%= link_to "Get it together, Salesforce!", up_grievance_path(grievance.id), remote: true, :class => "up-link"%>
+      <span class='up'> (<%= grievance.ups %>) </span>
+    
+      <%= link_to "Want some cheese with that whine?", down_grievance_path(grievance.id), remote: true, :class =>"down-link"%> 
+      <span class='down'> (<%= grievance.downs %>) </span>
+    </div>
+  </div>
+</div>
+
