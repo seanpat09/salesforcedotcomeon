@@ -2,11 +2,11 @@
   <h1 id='title'>Grievances from Anonymous Salesforce Developers</h1>
   <%= link_to 'Vent', '#', :id => 'vent' %>
 </div>
-<div class='grievances'>
+<ul id='grievances'>
   <% @grievances.each do |grievance| %>
     <%= render 'grievance', :grievance => grievance %>
   <% end %>
-</div>
+<ul>
 
 <div id='new' style="display : none;">
   <%= render 'form' %>
