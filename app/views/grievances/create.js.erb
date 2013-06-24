@@ -1,2 +1,3 @@
-alert('called');
 $("<%= escape_javascript(render @grievance) %>").appendTo("#grievances");
+$("textarea").val('');
+$("#new").dialog("close");
