@@ -32,15 +32,18 @@ a:hover{
   margin: 0 auto;
 }
 
-#title{
+#subtitle{
   position: absolute;
-  line-height: 3.5;
-  font-size: 30px;
+}
+
+#title{
+  font-size: 4em;
+  text-align: center;
 }
 
 #header a {
   float: right;
-  line-height: 10;
+  line-height: 4;
 }
   
 #grievances {
