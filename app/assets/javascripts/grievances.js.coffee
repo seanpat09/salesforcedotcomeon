@@ -5,11 +5,11 @@ $ ->
   $('#new').dialog
     autoOpen: false
     show:
-      effect: "blind"
+      effect: "slide"
       duration: 1000
   
     hide:
-      effect: "explode"
+      effect: "slide"
       duration: 1000
 
   $('#vent').click (event) ->

@@ -6,17 +6,11 @@
   line-height: 7;
 }
 
-.up-link{
-  color: blue;
+.up-link, .down-link{
+  color: white;
+  font-weight: bold;
   &:hover{
-    color: skyblue;
-  }
-}
-
-.down-link{
-  color: red;
-  &:hover{
-    color: lightpink;
+    color: black;
   }
 }
 
@@ -34,16 +28,7 @@ a:hover{
   }
   #vent {
 	float: right;
-	-moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
-	-webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
-	box-shadow:inset 0px 1px 0px 0px #ffffff;
-	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ededed), color-stop(1, #dfdfdf) );
-	background:-moz-linear-gradient( center top, #ededed 5%, #dfdfdf 100% );
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#dfdfdf');
 	background-color:#ededed;
-	-moz-border-radius:6px;
-	-webkit-border-radius:6px;
-	border-radius:6px;
 	border:1px solid #dcdcdc;
 	display:inline-block;
 	color:#777777;
@@ -74,6 +59,7 @@ a:hover{
   color: white;
   font-size: 4em;
   text-align: center;
+  font-weight: normal;
 }
 
 #grievances {
@@ -82,12 +68,31 @@ a:hover{
   list-style-type: none;
 }
 
+#grievances li {
+  background: #FF8708;
+}
+
+#grievances li:nth-child(2n){
+  background: #0FC705;
+}
+
+#grievances li:nth-child(3n) {
+  background: #0E9FCF;
+}
+
+#grievances li:nth-child(5n) {
+  background: #9595FF;
+}
+
 .grievance{
   margin: 10px;
-  border-radius: 10px;
   height: 100px;
-  background: #FFFFFF;
-  box-shadow: 3px 3px 1px; 
+  color: white;
+  font-size: 1.5em;
+}
+
+.votes {
+  font-size: 16px;
 }
 
 .content{
