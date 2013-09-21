@@ -3,7 +3,8 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .votes{
-  line-height: 7;
+  margin-top: 50px;
+  padding-bottom: 5px;
 }
 
 .up-link, .down-link{
@@ -86,9 +87,10 @@ a:hover{
 
 .grievance{
   margin: 10px;
-  height: 100px;
+  min-height: 100px;
   color: white;
   font-size: 1.5em;
+  line-height: 1;
 }
 
 .votes {
@@ -96,6 +98,7 @@ a:hover{
 }
 
 .content{
-  margin: 10px 20px;
-  position: absolute;
+  position: relative;
+  margin: 10px;
+  padding: 10px
 }
